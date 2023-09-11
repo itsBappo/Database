@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="database.css">
+</head>
+<body>
+
+<!-- HTML form to add new students -->
+<div class="container mt-5">
+  <h3>Add Student</h3>
+  <form id="studentForm">
+    <div class="form-group">
+      <label for="firstName">First Name:</label>
+      <input type="text" class="form-control" id="firstName" required>
+    </div>
+    <div class="form-group">
+      <label for="lastName">Last Name:</label>
+      <input type="text" class="form-control" id="lastName" required>
+    </div>
+    <div class="form-group">
+      <label for="age">Age:</label>
+      <input type="number" class="form-control" id="age" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Add Student</button>
+  </form>
+</div>
+
+<!-- HTML table to display student data -->
+<div class="container mt-5">
+  <h3>Student List</h3>
+  <input type="text" class="form-control" id="searchInput" placeholder="Search by Name or Last Name">
+  <button onclick="searchStudents()" class="btn btn-primary">Search</button>
+  <table id="studentTable" class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Last Name</th>
+        <th>Age</th>
+        <th>Assignments</th>
+        <th>Grades</th>
+      </tr>
+    </thead>
+    <tbody id="studentTableBody">
+      <!-- Student data will be dynamically added here -->
+    </tbody>
+  </table>
+</div>
+
+    <script src="database.js"></script>
+</body>
+</html>
